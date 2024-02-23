@@ -1,8 +1,8 @@
-﻿using Business.Services;
+﻿using Business.Services
 using DAL.Data;
 using DAL.Repository.Implementation;
 using DAL.Repository.Interface;
-using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Shared.Models;
@@ -34,7 +34,7 @@ namespace CarRental.Controllers
                     Model = postCar.Model,
                     RentalPrice = postCar.RentalPrice,
                     Availability = true,
-                };
+                
 
                 await carsService.CreateAsync(carDetail);
 
@@ -50,7 +50,7 @@ namespace CarRental.Controllers
             
         }
 
-        [HttpGet]
+        [HttpGet
         public async Task<IActionResult> GetCars()
         {
             try
